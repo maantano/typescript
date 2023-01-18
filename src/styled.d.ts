@@ -1,4 +1,4 @@
-import { DefaultTheme } from "./__styled.d";
+import { DefaultTheme } from "./styled.d";
 import "styled-components";
 
 declare module "styled-components" {
