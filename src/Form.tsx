@@ -1,6 +1,17 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 
+const Container = styled.div`
+  background-color: ${(props) => props.theme.bgColor};
+`;
+const H1 = styled.h1`
+  color: ${(props) => props.theme.textColor};
+`;
+
+const Btn = styled.button`
+  color: ${(props) => props.theme.btnColor};
+`;
+
 const Form = () => {
   const [value, setValue] = useState("");
   //타입을 줘야하는데, React 내부에 FormEvent 같은 함수는 구글링
@@ -20,7 +31,7 @@ const Form = () => {
   };
 
   return (
-    <div>
+    <Container>
       <form onSubmit={onSubmit}>
         <input
           value={value}
@@ -28,9 +39,11 @@ const Form = () => {
           type="text"
           placeholder="userNmae"
         />
-        <button>Log in</button>
+        <Btn>
+          <H1>Log in</H1>
+        </Btn>
       </form>
-    </div>
+    </Container>
   );
 };
 export default Form;

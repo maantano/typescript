@@ -1,6 +1,6 @@
 import styled, { keyframes } from "styled-components";
 import Circle from "./Circle";
-import Form from "./Form.";
+import Form from "./Form";
 
 function App() {
   return (
